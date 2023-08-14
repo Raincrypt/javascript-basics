@@ -96,8 +96,8 @@ console.log(mainPlane)
 //New Airplane Launched of same group
 
 let childPlane = {
-    airline: "Fly India",
-    iatacode: "FI",
+    airline: "Drown India",
+    iatacode: "DI",
     bookings: [],
 }
 let book = mainPlane.book;
@@ -159,3 +159,26 @@ for(let key in ride){
     x = `${x} ${ride[key]}`
 }
 console.log(x.trim())
+
+//spread operator in object
+const user1 = { name: "Heisenberg", age: 17};
+const admin = { admin: true, ...user1 }; //adds all the properties of user1 to admin
+
+console.log(admin);
+
+//destructuring objects
+
+const user2 = { 
+    name: "Heisenberg", 
+    age: 18, 
+    fullName: { 
+        first: "Walter", 
+        second:"White"
+    }
+};
+
+const { name: myName } = user2;
+console.log(myName); //Heisenberg
+
+const {fullName:{first:myFirstName}} = user2;
+console.log(myFirstName); //Walter

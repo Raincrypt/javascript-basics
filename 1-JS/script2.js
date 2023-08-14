@@ -87,3 +87,54 @@ fun()
 function fun(){
     console.log("aaa")
 }
+
+//Currying
+let sum = (a, b) => a + b;
+let subtract = (a, b) => a - b;
+let multiply = (a, b) => a * b;
+let divide = (a, b) => a / b;
+
+let evaluate = (operation) => {
+    return function(num1){
+        return function(num2){
+            let result = sum(num1, num2);
+            console.log(`Numbers: ${num1} and ${num2} (${operation})`);
+            if(operation === "sum") result = sum(num1,num2);
+            else if(operation === "subtract") result = subtract(num1,num2);
+            else if(operation === "divide") result = divide(num1,num2);
+            else if(operation === "multiply") result = multiply(num1,num2);
+            else result = "Invalid Operation";
+            console.log(`Result: ${result}`)
+        }
+    }
+}
+
+evaluate("sum")(8)(4);
+evaluate("multiply")(8)(4);
+evaluate("divide")(8)(4);
+evaluate("subtract")(8)(4);
+evaluate("invalid")(2)(2);
+
+const mul = evaluate("multiply");
+mul(2)(3);
+mul(7)(11);
+
+//currying vs partial application
+
+//currying
+function sum2(a){
+    return function(b){
+        return function(c){
+            return a + b + c;
+        }
+    }
+}
+console.log(sum(10)(5)(2))
+
+//partial application
+function sum1(a){
+    return function(b, c){
+        return a + b + c;
+    }
+}
+console.log(sum(10)(5, 2))

@@ -29,7 +29,7 @@ console.log(arrHobbies);
 let score = 50;
 console.log(score * 2 + (4 + 4) - 8 / 2 % 4) // 108
 
-//loose eqality(==) vs scrict eqality(===)
+//loose eqality(==) vs strict eqality(===)
 let age = 22; //number
 console.log(age == "22") //focus only on value... genarally not advisable
 console.log(age === "22") //focuses on both value and type
@@ -67,7 +67,7 @@ let password = "qwerty22"
 let errorMsg = "Change Your Password"
 let okMsg = "Good Password"
 let correctMsg = "Strong Password"
-// Priority of operators is not => && , || from left to right
+// Priority of operators is "not" "=> / <=" "&& / ||" from left to right
 if(password.length >=6 && password.includes("@")){
     console.log(correctMsg)
 }

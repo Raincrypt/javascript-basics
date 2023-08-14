@@ -2,7 +2,7 @@
 //Date method
 let currentDate = new Date()
 console.log(currentDate)
-let someDate = new Date(21, 0, 24) //yy, mm, dd, hr, min, sec
+let someDate = new Date(2021, 0, 24) //yy, mm, dd, hr, min, sec
 //month sarts from 0
 console.log(someDate)
 let date = new Date(0)// time in millisecond if one argument

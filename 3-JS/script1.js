@@ -1,6 +1,6 @@
 //Object oriented programming
 
-//We cannot use "arrow" function as cunstructor
+//We cannot use "arrow" function as constructor
 
 //1. new {object} created empty initially
 //2. "this" = {object}

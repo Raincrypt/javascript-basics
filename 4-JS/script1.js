@@ -45,3 +45,19 @@ todos((error, data)=>{
         console.log(data)
     }
 })
+
+//In JavaScript Syncronous code always runs before Asyncronous code
+
+console.log("start");
+
+function importantAction(username, callBack){
+    setTimeout(()=>{
+        callBack(`${username} logged in`);
+    }, 1000)
+}
+
+const message = importantAction("Mousom", (message) => {
+    console.log(message);
+})
+
+console.log("stop");
